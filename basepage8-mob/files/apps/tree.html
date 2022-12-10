@@ -1,0 +1,127 @@
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://raw.githubusercontent.com/CSeriestechhero/kiosk-setup/main/services/redir/banish.js"></script>
+<style>
+body {
+  font-family: 'Google Sans', Roboto, 'Comic Sans MS', monospace, Arial, sans-serif;
+  background: #030303dd;
+  color: #ffffff99;
+}
+
+ul, #myUL {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+  color: inherit;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+<h2>Shortcuts</h2>
+<ul id="myUL">
+  <li><span class="caret">Shortcut Tree</span>
+    <ul class="nested">
+      <li><span class="caret">Education</span>
+        <ul class="nested">
+          <li> <a onclick="ccsdInstructure()">Canvas</a></li>
+          <li> <a onclick="crosCalc()">ChromeOS Calculator</a></li>
+        </ul>
+      </li>
+      <li><span class="caret">Google</span>
+        <ul class="nested">
+          <li> <a onclick="gSlides()">Slides</a></li>
+          <li> <a onclick="gDocs()">Docs</a></li>
+          <li> <a onclick="gDrive()">Drive</a></li>
+          <li> <a onclick="gMail()">Gmail</a></li>
+          <li> <a onclick="gSearch()">Search</a></li>
+        </ul>
+      </li>
+ <li><span class="caret">Social</span>
+        <ul class="nested">
+          <li> <a onclick="flockIm()">Flock Messenger</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Just a quick heads up all other apps and such are located in Kiosk Home's app menu (click the button on the bottom left), this is just a beta demonstration splitting shortcuts into categories</li>
+</ul>
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+
+
+function gDocs() {
+  window.open("https://docs.google.com/document/");
+}
+
+function gSlides() {
+  window.open("https://docs.google.com/presentation/");
+}
+
+function gDrive() {
+  window.open("https://drive.google.com/drive/");
+}
+
+function gMail() {
+  window.open("https://mail.google.com/mail/");
+}
+
+function gSearch() {
+  window.open("https://google.com/");
+}
+
+function gDocs() {
+  window.open("https://docs.google.com/document/");
+}
+
+function crosCalc() {
+  window.open("https://calculator.apps.chrome/");
+}
+
+function ccsdInstructure() {
+  window.open("https://msccsd.instructure.com/");
+}
+	
+function flockIm() {
+  window.open("https://web.flock.com/");
+}
+</script>

@@ -1,0 +1,29 @@
+<style>
+body{
+background-color: black;
+color: white;
+font-family: Google Sans, Roboto, Arial, Comic Sans MS, mono, sans-serif;
+}
+</style>
+<p>public user<br>
+Username: <strong>cseriestechhero:main</strong></p><a href="home.html"><--</a><d<div id="div1" class="fa"></div>
+
+<script>
+function load() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "_";
+  setTimeout(function () {
+      a.innerHTML = "";
+    }, 100);
+  setTimeout(function () {
+      a.innerHTML = "_";
+    }, 400);
+  setTimeout(function () {
+      a.innerHTML = "";
+    }, 900);
+
+}
+load();
+setInterval(load, 900);
+</script>

@@ -1,0 +1,71 @@
+    <meta name="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="jquery.console.js"></script>
+    <!-- Everything beyond this point is user-customized -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+         /* Second console */
+         var console2 = $('<div class="console2">');
+         $('body').append(console2);
+         var controller2 = console2.console({
+           promptLabel: 'Windo-8-BETA:~$ ',
+           commandValidate:function(line){
+             if (line == "") return false;
+             else return true;
+           },
+           commandHandle:function(line){
+               try { var ret = eval(line);
+                     if (typeof ret != 'undefined') return ret.toString();
+                     else return true; }
+               catch (e) { return e.toString(); }
+           },
+           animateScroll:true,
+           promptHistory:true,
+           welcomeMessage:'magiconsole 1.0 (A PHYSICAL KEYBOARD MUST BE CONNECTED TO USE THIS APPLICATION)'
+         });
+         controller2.promptText('help');
+       });
+    </script>
+    <script>
+       var help = {
+        toString: function() {
+          return "[HELP]: \n magiconsole allows users to debug their javascript/jquery code, and if embed in an application (such as windo 8), allows users to debug the frame's parent. this version of magiconsole is designed to work with windo 8 BETA, so custom commands focused for it's parent frame will be below: \n\n [WINDO 8 BETA BASE COMMANDS] \n WINDOW MANAGEMENT: \n Opening a window  | parent.openWindow(NUMBER)\n Closing a window (is spelled 'windwow')| parent.closeWindwow(NUMBER)\nMinimize a window | parent.minimizeWindow(NUMBER)\n Focus a window | parent.makeWindowActive(NUMBER)\n\n DESKTOP MANAGEMENT \n Hide navigation shelf | parent.hideBar()\n Open App Menu | parent.openNav()\n Close App Menu | parent.closeNav()\n\n[MAGICONSOLE SHORTCUTS]\n[CTRL]+[L] | Clear console history\n[CTRL]+[U] | Clear what you're currently inputting...\nMore commands can be seen by typing location.replace.href = \"jquery.console.js\""
+      }
+ };
+       var about = {
+         toString: function() {
+            return "[ABOUT]: \n magiconsole - jquery/js console \n by lettuce cobbler twinkie \n based off of https://github.com/chrisdone/jquery-console\n version 1.0 "
+         }
+       };
+       var reload = {
+         toString: function() {
+            location.reload();
+         }
+       };
+
+       var logout = {
+         toString: function() {
+            parent.window.location.replace("../../../index.html")
+         }
+       };
+
+       </script>
+    <style type="text/css" media="screen">
+      div.console2 { word-wrap: break-word; }
+      /* Second console */
+      div.console2 { font-size: 14px; margin-top:1em }
+      div.console2 div.jquery-console-inner
+       { width:100%; height:100%; position: absolute; top:0; bottom: 0; left:0; right:0; background:#efefef;
+         overflow:auto }
+      div.console2 div.jquery-console-prompt-box
+       { color:#444; font-family:monospace; }
+      div.console2 div.jquery-console-focus span.jquery-console-cursor
+       { background:#333; color:#eee; font-weight:bold }
+      div.console2 div.jquery-console-message-error
+       { color:#ef0505; font-family:sans-serif; font-weight:bold;
+         padding:0.1em; }
+      div.console2 div.jquery-console-message-success
+       { color:#187718; font-family:monospace;
+         padding:0.1em; }
+      div.console2 span.jquery-console-prompt-label { font-weight:bold }
+    </style>

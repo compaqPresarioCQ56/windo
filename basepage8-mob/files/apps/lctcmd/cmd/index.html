@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log in</title>
+<meta name="theme-color" content="#000000"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { 
+  background: #000000;
+ } 
+ {
+opacity: 0.1;
+}
+
+h1 {
+ color: white;
+ font-family: Google Sans, Roboto, Arial, mono, monospace, Comic Sans MS;
+text-align: center;
+  margin: 24px 0 12px 0;
+  padding: 16% 16% 0% 16%;
+
+}
+p {
+ color: white;
+ font-family: Roboto, Arial, mono, monospace, Comic Sans MS;
+text-align: center;
+  margin: 24px 0 12px 0;
+  padding: 0% 16% 0% 16%;
+}
+input:focus{
+background-color: #111;
+  color: white;
+}
+input.btn {
+ font-family: Roboto, Arial, mono, monospace, Comic Sans MS;
+background-color: #111;
+color: white;
+border: none;
+margin-left: auto;
+margin-right: auto;
+border:1px #fff solid;
+}
+input.btn:focus{
+-webkit-box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #ffffff, 0px 0px 0px 24px #000000 0px 0px 0px 31px #ffffff, 0px 0px 0px 39px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #ffffff, 0px 0px 0px 24px #000000, 0px 0px 0px 31px #ffffff, 0px 0px 0px 39px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+transition: -webkit-box-shadow 2s, box-shadow 2s;
+}
+input {
+ font-family: Google Sans, Roboto, Arial, mono, monospace, Comic Sans MS;
+background-color: #000000;
+  color: white;
+border:1px #fff solid;
+text-align: center;
+}
+#typedtext {
+color: white;
+position: fixed;
+}
+form {
+margin: auto;
+align-content: center;
+text-align: center;
+}
+</style>
+</head>
+<body>
+ <div id="typedtext"></div>
+<h1>
+LCTcmd<br></h1><br><p>Enter the user info</p><br><form name="login">
+<input placeholder="Username" type="text" name="userid" value="cseriestechhero:main"/><br><Br>
+<input placeholder="Password" type="password" name="pswrd"/><br><br>
+<input class="btn" type="button" onclick="check(this.form)" value="Login"/>
+<input class="btn" type="reset" value="Clear"/>
+</form>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "cseriestechhero:main" && form.pswrd.value == "test0000")
+  {
+    window.location.replace("prompt.html")/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+
+  <script>// set up text to print, each item in array is new line
+var aText = new Array(
+"Welcome to LCTcmd",
+"version 1.0",
+"In order to use this site, you need the login information",
+"Contact lcteatsoatmeal@gmail.com for login information",
+"News: Recreated dripcord. It's not a proxy anymore, it's a AI story archive (not a AI story generator)",
+"W2Nob3J1c10=",
+"",
+"SSdtIGRvaW4nIHlvdXIgbW9tLCBZZXMgeW91cnMh",
+"Rmlyc3Qgc2F3IGhlciBpbiB0aGUgV2FsLU1hcnQgcGlja2luJyBvdXQgeW91ciBkcmF3ZXJz",
+"QmlnIERvbGx5IFBhcnRvbiBoYWlyIGxpa2UgYW4gODAncyBwcm9tIHF1ZWVu",
+"QnV0IGhlciBhc3Mgd2FzIGxvb2tpbiBnb29kIGFsbCB1cCBpbiB0aGVtIG1vbSBqZWFucw==",
+"SSBhcHByb2FjaGVkIGhlciBpbiB0aGUgY2hlY2tvdXQgbGluZSwgYW5kIHNhaWQgeW8gYmFieSB3YXNzdXA/",
+"U2hlIGhhZCB0d28gZ2FsbG9ucyBvZiBtaWxrLCBhbmQgSSB3YXMgc3RhcmluIGF0IGhlciBqdWdzLg==",
+"Rml2ZSBtaW51dGVzIGxhdGVyIHNoZSBhZ3JlZWQgdG8gZ2V0IHdpdGggbWU=",
+"U28gd2Ugd2VudCBhbmQgcm9ja2VkIHRoZSBtaW5pdmFuIGxpa2UgR2lnZ2l0eS4gR2lnZ2l0eS4gR2lnZ2l0eS4=",
+"",
+"SSB3YXMgcmlkaW4nIHlvdXIgbW9tIGxpa2Ugc2hlIHdhcyBNYXJpbyBLYXJ0Lg==",
+"SSBnYXZlIGhlciBhIGxpZnQgYmFjayB0byBoZXIgY3JpYiBjYXVzZSBoZXIgY2FyIHdvdWxkbid0IHN0YXJ0",
+"U2hlIGludml0ZWQgbWUgaW4gdGhlIGhvdXNlIGFuZCB3ZSBzdGFydGVkIG1ha2luIG91dCBhZ2Fpbg==",
+"SG93IG1hbnkgdGltZXMgSSB0YXAgdGhhdCBhc3M/IE9WRVIgOTAwMCEh",
+"WWVhaCBTaGUgY2FsbGVkIG1lIFBsZWRnZSBjYXVzZSBJIGtub2NrZWQgdGhlIGR1c3Qgb2ZmIGl0",
+"U2hlIGxhdGVyIG1hZGUgbWUgYSBzYW5kd2ljaCBhbmQgc2hlIGN1dCB0aGUgY3J1c3Qgb2ZmIGl0",
+"Q2F1c2Ugc2hlIGtub3dzIGhvdyBJIGxpa2UgaXQgYW5kIHRoYXQgSW0gYSBsaXR0bGUgeW91bmc=",
+"VG8gYmUgaW4gdGhlIGJlZCBidXR0LW5ha2VkIGRvaW4geW91ciBtb20=",
+"",
+"W3JlcGVhdCBjaG9ydXNd",
+"",
+"SSBsaWtlIHlvdXIgbWFtYXMgYmlnIGJ1dHQsIGFuZCBJIGNhbm5vdCBsaWU=",
+"WW91IG90aGVyIGJyb3RoZXJzIGNhbnQgZGVueSB0aGF0IHNoZXMgZmx5",
+"V2UgbWFrZSBzZXh5IHRpbWUgeWVzIGFuZCBldmVyeSBuaWdodCBJIHRhcCB0aGF0Lg==",
+"U2hlIHNhdyBtZSBidXR0LW5ha2VkIG5vdyBzaGUgdGhpbmtzIEltIGhhbGYgYmxhY2s=",
+"WW91ciBtb21zIHRoZSBiZXN0IHRoZSBzdXBlciBNLkkuTC5GLg==",
+"Q2F1c2Ugc2hlIGxvdmVzIHRvIHRvc3MgdGhlIHNhbGFkIGV2ZW4gdGhvdWdoIHNoZSBhaW50IGEgY2hlZg==",
+"QW5kIEkgYmxhbWUgaXQgb24gdGhlIGFsLWFsLWFsLWNvaG9s",
+"QnV0IElmIEkgd2VyZSB5b3UgSSB3b3VsZG50IGtpc3MgeW91ciBtb20gb24gdGhlIG1vdXRoIGF0IGFsbA==",
+"",
+"U2hlIGxpa2VzIHRoZSBEb25rZXktUHVuY2g=",
+"U2hlIGxpa2VzIHRoZSBEaXJ0eSBTYW5jaGV6",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"Welcome to LCTcmd",
+"Please log in",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+
+
+);
+var iSpeed = 0.5; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 9; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter()
+{
+ sContents =  '';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br/>';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 500);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+
+typewriter();</script>
+
+<script>
+function load() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "_";
+  setTimeout(function () {
+      a.innerHTML = "　";
+    }, 100);
+  setTimeout(function () {
+      a.innerHTML = "_";
+    }, 400);
+  setTimeout(function () {
+      a.innerHTML = "　";
+    }, 900);
+
+}
+load();
+setInterval(load, 900);
+</script>
+
+
+</body>
+</html>
