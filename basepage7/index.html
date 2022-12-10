@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="jquery-ui.css">
+	<link rel="canonical" href="https://html5-templates.com/" />
+	<script src="jquery-1.12.4.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="lockDownStyle.css" />
+	<link rel="stylesheet" type="text/css" href="contextLockDown.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="lockRec/fontCSS.css"
+      rel="stylesheet">
+	<script src="context.js"></script>
+<script src="microne.js"></script>
+	<title>Kiosk Home - Log In</title>
+</head>
+
+<body>
+	<div id="desktop">
+	<div id="loader-screen">
+	<div id='loader'>
+		<div id="bg"></div>
+		<div id='circle'></div>
+		<div id='circle'></div>
+		<div id='circle'></div>
+		<div id='circle'></div>
+		<div id='circle'></div>
+	</div>
+	<style>
+		#splashIMG {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 99999;
+		}
+	</style>
+	<img src="https://github.com/CSeriestechhero/kiosk-setup/blob/main/services/redir/basepage7/files/uploads/paperscalable.svg?raw=true" alt="splash" id="splashIMG" width="1000" height="800">
+
+	<p id="loading"
+		style="text-align:center !important;position: fixed; right:0%; left: 0%; top: 53%; font-size: 20px; font-family: 'Segoe UI', Google Sans, Roboto, Arial, monospace;">
+		<b>Starting up...</b></p>
+</div>
+<style>
+	#loader,
+	#circle,
+	#bg,
+	#loading,
+	#loader-screen {
+		animation: css 0s 15s forwards;
+	}
+
+	@keyframes css {
+		to {
+			visibility: hidden;
+		}
+	}
+
+	#splashIMG {
+		animation: css 0s 4s forwards;
+	}
+
+	@keyframes css {
+		to {
+			visibility: hidden;
+		}
+	}
+
+	#loader-screen {
+		background-color: #111111;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 99999;
+        color: #dfdfdf;
+	}
+
+	#loader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 50px;
+		height: 50px;
+		margin: auto;
+	}
+
+	#loader #circle {
+		position: absolute;
+		width: 38px;
+		height: 38px;
+		opacity: 0;
+		transform: rotate(225deg);
+		animation-iteration-count: infinite;
+		animation-name: orbit;
+		animation-duration: 5.5s;
+	}
+
+	#loader #circle:after {
+		content: '';
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		border-radius: 5px;
+		background: #cfcfcf;
+	}
+
+	#loader #circle:nth-child(1) {
+		animation-delay: 120ms;
+	}
+
+	#loader #circle:nth-child(2) {
+		animation-delay: 240ms;
+	}
+
+	#loader #circle:nth-child(3) {
+		animation-delay: 480ms;
+	}
+
+	#loader #circle:nth-child(4) {
+		animation-delay: 720ms;
+	}
+
+	#loader #circle:nth-child(5) {
+		animation-delay: 960ms;
+	}
+
+	#loader #bg {
+		position: absolute;
+		width: 70px;
+		height: 70px;
+		margin-left: -16px;
+		margin-top: -16px;
+		border-radius: 13px;
+		animation: bgg 16087ms ease-in alternate infinite;
+	}
+
+	@keyframes orbit {
+		0% {
+			transform: rotate(225deg);
+			opacity: 1;
+			animation-timing-function: ease-out;
+		}
+
+		7% {
+			transform: rotate(345deg);
+			animation-timing-function: linear;
+		}
+
+		30% {
+			transform: rotate(455deg);
+			animation-timing-function: ease-in-out;
+		}
+
+		39% {
+			transform: rotate(690deg);
+			animation-timing-function: linear;
+		}
+
+		70% {
+			transform: rotate(815deg);
+			opacity: 1;
+			animation-timing-function: ease-out;
+		}
+
+		75% {
+			transform: rotate(945deg);
+			animation-timing-function: ease-out;
+		}
+
+		76% {
+			transform: rotate(945deg);
+			opacity: 0;
+		}
+
+		100% {
+			transform: rotate(945deg);
+			opacity: 0;
+		}
+	}
+</style>
+<style>
+	.parent {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.child {
+		position: fixed;
+		right: 20%;
+		font-family: 'Google Sans', Roboto, Arial;
+		font-size: 15px;
+		color: #cf0a0a;
+	}
+</style>
+
+
+
+	<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+	<div class="position">
+    <div class="container" align="center">
+        <table style="text-align: left; width: 99%; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;"  class="openWindow" data-id="0"><a>Login</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;" class="openWindow" data-id="1"><a>Options</a><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+		<div class="window app" data-title="Login">
+<p style="text-align: center;">Enter your login information.</p><br>
+<form id="login" style="align-items:center;" name="login">
+<input placeholder="Username" type="text" name="userid"/><br><Br>
+<input placeholder="Password" type="password" name="pswrd"/><br><br>
+<input class="btn" type="button" onclick="check(this.form)" value="Login"/>
+<input class="btn" type="reset" value="Clear"/>
+</form>
+
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "cseriestechhero" && form.pswrd.value == "test0000")
+  {
+    window.location.replace("session.html")/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Wrong username OR password.")/*displays error message*/
+  }
+}
+</script>
+</div>
+
+		<div id="bgchanger" class="window closed app" data-title="Options">
+			<h1 class="settingui" >Options</h1><br>
+			<script type="text/javascript">
+    var defaultImage = "lockRec/bgimg.png";
+    document.getElementsByTagName('div')[0].style.backgroundImage = localStorage.getItem('back') ? "url('"+localStorage.getItem('back')+"')" : "url('"+defaultImage+"')";
+  function changebackground(){
+      var url =  document.getElementById('bgchanger').value;
+      document.getElementsByTagName('div')[0].style.backgroundImage = "url('" + url + "')";
+      localStorage.setItem('back',url);
+    }
+</script><input class="settingui" style="width: 70%;" type="text" id="bgchanger" placeholder="Change Background Add URL" />
+<input class="settingui" type="button" onclick="changebackground();" value="Change!" /><br><span style="text-align: center;">---</span>
+		<div><button onclick="myFunction()">Toggle dark mode</button></div>
+		</div>
+		
+    <div id="icons">
+    		<a class="openWindow" data-id="0">login</a>
+			<a class="openWindow" data-id="1">settings</a>
+    </div>
+</body>
+</html>

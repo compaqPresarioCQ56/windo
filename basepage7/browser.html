@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="browser.css">
+    <script src="config.js"></script>
+    <script src="popup.js"></script>
+    <script src="tabs.js"></script>
+    <script src="browser.js"></script>
+    <script src="browser_main.js"></script>
+	 <script src="background.js"></script>
+	 <script src="button.js"></script>
+  </head>
+  <body>	<button style="position:fixed; right:0; top: 0;float:right;background-color: #af0a0aaa;border-radius: 100px 100px 100px 100px;z-index:99999;" id="close-window-button">&times;</button>            
+      
+    <div id="controls">
+
+      <div id="tab-controls">
+        <ul id="tab-container">
+          <li id="new-tab"><a href="#new-tab">+</a></li>
+          <!--<li id="close-tab"><a href="#close-tab">&times;</a></li>-->
+        </ul>
+      </div>
+
+      <div id="browser-controls">
+        <button id="back" title="Go Back"><img src="arrow_back.svg"/></button>
+        <button id="forward" title="Go Forward"><img src="arrow_forward.svg"/></button>
+        <button id="home" title="Go Home"><img src="home.svg"/></button>
+        <button id="reload" title="Reload"><img style="height: 18px;width:18px;" src="reload.svg"/></button>
+
+        <form id="location-form">
+          <div id="center-column">
+            <input id="location" type="text">
+          </div>
+          <input class="gobtn" type="submit" value="     " style="background-image: url('go.svg');
+background-repeat: no-repeat;">
+			 <button style="-webkit-app-region: drag;">&#9638;</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div id="content-container">
+    </div>
+
+  </body>
+</html>
