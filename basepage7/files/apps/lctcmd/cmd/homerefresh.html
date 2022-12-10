@@ -1,0 +1,124 @@
+<meta http-equiv="refresh" content="31; URL=home.html" />
+<marquee style="position: fixed; top: 50%;" behavior="scroll" direction="left" scrollamount="3">
+	<mark>
+		<h1 style="font-size:20px; z-index:99999 !important;" id="currentTime"></h1><mark>
+</marquee>
+<marquee style="position: fixed; top: 50%;" behavior="scroll" direction="right" scrollamount="2">
+	<mark>
+		<h1 style="font-size:100px; opacity:20%; z-index:99999 !important;" class="logo" >Command-Prompt.LCT</h1><mark>
+</marquee>
+<h4 style="font-size: 30px;">The home menu is going to be refreshed </h4>
+<br><p> Log into LCTapps Devmail: devMail-login<br>Log into twinkiefans: twinkie-fans.lct<br>Dripcord AI Stories: dripcord<br>More reference: ref_advanced</p>
+<script>window.onload = function () {
+  clock();
+  function clock() {
+    var now = new Date();
+    var TwentyFourHour = now.getHours();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+    var mid = 'pm';
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (hour > 12) {
+      hour = hour - 12;
+    }
+    if (hour == 0) {
+      hour = 12;
+    }
+    if (TwentyFourHour < 12) {
+      mid = 'am';
+    }
+    document.getElementById('currentTime').innerHTML = hour + ':' + min + ' ' + mid;
+    setTimeout(clock, 1000);
+  }
+}
+
+
+</script>
+  <p>Please wait in<j<div id="typedtext"></div>seconds</p>
+  <script>// set up text to print, each item in array is new line
+var aText = new Array(
+"30s", 
+"29s",
+  "28s",
+  "27s",
+  "26s",
+"25s",
+  "24s",
+"23s",
+  "22s",
+  "21s",
+"20s", 
+"19s",
+"18s",
+"17s",
+"16s",
+"15s",
+"14s",
+"13s",
+"12s",
+"11s",
+"10s",
+"9s",
+"8s",
+"7s",
+"6s",
+"5s",
+"4s",
+"3s",
+"2s",
+"1s",
+"0s",
+"You should be redirected.",
+);
+var iSpeed = 1; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 0; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 1000);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+
+typewriter();</script>
+<style>body, span, p, h1, h2, h3, h4, h5, h6, a, html {
+background-color: black;
+color: white;
+font-family: 'Google Sans', Roboto, Arial, monospace;
+cursor: url(https://lettuce-it.tribe.so/api/v1/posts/5ecf50168c42dd699c00ef95/download/5ecf50168c42dd699c00ef96),auto;
+}
+#currentTime {
+  font-size: 200px !important;
+ opacity: 30%;
+  text-align: center !important;
+  font-family: 'Google Sans', 'Roboto', Courier, monospace !important;
+  font-weight: 1000;
+  color: #fff;
+  cursor: url(https://lettuce-it.tribe.so/api/v1/posts/5ecf50168c42dd699c00ef95/download/5ecf50168c42dd699c00ef96),auto;
+}
+</style>

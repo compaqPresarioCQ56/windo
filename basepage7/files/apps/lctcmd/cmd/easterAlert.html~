@@ -1,0 +1,115 @@
+<meta http-equiv="refresh" content="4; URL=http://hexgl.bkcore.com/play/" />
+<style>
+body{
+background-color: black;
+  color: white;
+}
+
+</style>
+<p>You found an easter egg! More secrets coming out soon!<br>
+
+
+  
+<body>
+  <div id="typedtext"></div>
+  <script>// set up text to print, each item in array is new line
+var aText = new Array(
+"__________████████__________", 
+"________██________██________",
+  "______██▒▒__________██______",
+  "____██▒▒____________▒▒██____",
+  "____██▒▒____________▒▒██____",
+"__██__________________▒▒██__",
+  "__██__________________▒▒██__",
+"██________________________██",
+  "██________________________██",
+  "██______________________▒▒██",
+"██▒▒____________________▒▒██",
+"__██__________________▒▒██__",
+"__██▒▒________________▒▒██__",
+"____██▒▒______________██____",
+"______████________████______",
+"__________████████__________",
+"i typed an egg for you!",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+
+);
+var iSpeed = 10; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 17; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 800);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+
+typewriter();</script>
+</body>
+
+
+
+
+
+
+
+
+                                                                        <j<div id="div1" class="fa"/></p>
+
+<script>
+function load() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "_";
+  setTimeout(function () {
+      a.innerHTML = "";
+    }, 100);
+  setTimeout(function () {
+      a.innerHTML = "_";
+    }, 400);
+  setTimeout(function () {
+      a.innerHTML = "";
+    }, 900);
+
+}
+load();
+setInterval(load, 900);
+</script>

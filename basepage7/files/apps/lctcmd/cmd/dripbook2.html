@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dripcord</title>
+<meta name="theme-color" content="#000000"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { 
+  background: #000000;
+ } 
+ {
+opacity: 0.1;
+}
+
+h1 {
+ color: white;
+ font-family: Google Sans, Roboto, Arial, mono, monospace, Comic Sans MS;
+text-align: center;
+  margin: 24px 0 12px 0;
+  padding: 16% 16% 0% 16%;
+
+}
+p {
+ color: white;
+ font-family: Roboto, Arial, mono, monospace, Comic Sans MS;
+text-align: center;
+  margin: 24px 0 12px 0;
+  padding: 0% 16% 0% 16%;
+}
+input:focus{
+background-color: #111;
+  color: white;
+}
+input.btn {
+ font-family: Roboto, Arial, mono, monospace, Comic Sans MS;
+background-color: #111;
+color: white;
+border: none;
+margin-left: auto;
+margin-right: auto;
+border:1px #fff solid;
+}
+input.btn:focus{
+-webkit-box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #ffffff, 0px 0px 0px 24px #000000 0px 0px 0px 31px #ffffff, 0px 0px 0px 39px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #ffffff, 0px 0px 0px 24px #000000, 0px 0px 0px 31px #ffffff, 0px 0px 0px 39px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+transition: -webkit-box-shadow 2s, box-shadow 2s;
+}
+input {
+ font-family: Google Sans, Roboto, Arial, mono, monospace, Comic Sans MS;
+background-color: #000000;
+  color: white;
+border:1px #fff solid;
+text-align: center;
+}
+#typedtext {
+color: white;
+position: fixed;
+}
+form {
+margin: auto;
+align-content: center;
+text-align: center;
+}
+</style>
+</head>
+<body>
+ <div id="typedtext"></div>
+
+
+  <script>// set up text to print, each item in array is new line
+var aText = new Array(
+"",
+"██████╗░██████╗░██╗██████╗░░█████╗░░█████╗░██████╗░██████╗░",
+"██╔══██╗██╔══██╗██║██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔══██╗",
+"██║░░██║██████╔╝██║██████╔╝██║░░╚═╝██║░░██║██████╔╝██║░░██║",
+"██║░░██║██╔══██╗██║██╔═══╝░██║░░██╗██║░░██║██╔══██╗██║░░██║",
+"██████╔╝██║░░██║██║██║░░░░░╚█████╔╝╚█████╔╝██║░░██║██████╔╝",
+"╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░░░░░╚════╝░░╚════╝░╚═╝░░╚═╝╚═════╝░",
+"█▄▄ █▄█   █░░ █▀▀ ▀█▀ █▀▀ █▀▄▀█ █▀▄",
+"█▄█ ░█░   █▄▄ █▄▄ ░█░ █▄▄ █░▀░█ █▄▀",
+"<strong>Written by my friend charlie then badly translated from google translate</strong>",
+"",
+
+"",
+"",
+"",
+"Story 2: Adventourus Magic 10",
+"",
+"A cult led by the only person with magical abilities.",
+"He has the ability to do magic for others, but he forces people to do evil ",
+"to him. This magic can also be the DNA of our protagonist. His parents were in the ",
+"heyday of the cult. The leader thought this was a chance to attack the enemy, but our protagonist said",
+" it was a curse. He soon realized how evil this cult was, fled and started a new life, but in his village he had to use the ",
+"magic to finally protect it, and soon those words came out. Diffusion. Our protagonist has finally found ",
+"a village that looks like it. No matter who you are, you can live with people seeking social asylum in",
+" this city, but only a few years after the believers arrive. We attacked the hero and left in ",
+"hopes of revenge.",
+"",
+"end of the second story. type dripstory3 to see if there is a third story out",
+);
+var iSpeed = 0.2; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 30; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter()
+{
+ sContents =  '';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br/>';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 200);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+
+typewriter();</script>
+
+<script>
+function load() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "_";
+  setTimeout(function () {
+      a.innerHTML = "　";
+    }, 100);
+  setTimeout(function () {
+      a.innerHTML = "_";
+    }, 400);
+  setTimeout(function () {
+      a.innerHTML = "　";
+    }, 900);
+
+}
+load();
+setInterval(load, 900);
+</script>
+
+
+</body>
+</html>

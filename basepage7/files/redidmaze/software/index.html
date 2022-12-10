@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log in</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+input.btn {
+ font-family: Roboto, Arial, mono, monospace, Comic Sans MS;
+background-color: #af0a0aaa;
+border: none;
+margin-left: auto;
+margin-right: auto;
+}
+input.btn:focus{
+-webkit-box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #af0a0a, 0px 0px 0px 24px #000000 0px 0px 0px 31px #af0a0a, 0px 0px 0px 100vw #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #af0a0a, 0px 0px 0px 24px #000000, 0px 0px 0px 31px #af0a0a, 0px 0px 0px 100vw #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+transition: -webkit-box-shadow 2s, box-shadow 2s;
+}
+input {
+ font-family: Google Sans, Roboto, Arial, mono, monospace, Comic Sans MS;
+background-color: #af0a0aaa;
+border:none;
+text-align: center;
+border-radius: 5px 5px 5px 5px;
+}
+input:focus {
+-webkit-box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #af0a0a, 0px 0px 0px 24px #000000 0px 0px 0px 31px #af0a0a, 0px 0px 0px 100vw #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #af0a0a, 0px 0px 0px 24px #000000, 0px 0px 0px 31px #af0a0a, 0px 0px 0px 100vw #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+transition: -webkit-box-shadow 2s, box-shadow 2s;
+}
+form {
+margin: auto;
+align-content: center;
+text-align: center;
+}
+</style>
+</head>
+<body>
+
+<p>Enter your login information.</p><br><form name="login">
+<input placeholder="Username" type="text" name="userid"/><br><Br>
+<input placeholder="Password" type="password" name="pswrd"/><br><br>
+<input class="btn" type="button" onclick="check(this.form)" value="Login"/>
+<input class="btn" type="reset" value="Clear"/>
+</form>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "cseriestechhero" && form.pswrd.value == "test0000")
+  {
+    window.location.replace("index.html")/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Wrong username OR password.")/*displays error message*/
+  }
+}
+</script>
+</body>
+</html>

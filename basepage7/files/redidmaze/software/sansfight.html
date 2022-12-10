@@ -1,0 +1,75 @@
+	<html lang="en"><!-- #BeginTemplate "/Templates/Main.dwt" --><!-- DW6 --><head>
+<!-- #BeginEditable "doctitle" -->
+<title>Windows 10</title>
+	<style>body{background-color: #000;}</style>
+<!-- #EndEditable -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="stylejs.css">
+<body onload="load()">
+<button id="options" style="position: absolute; left: 5px; bottom:5px; font-size: 15px; z-index:3; font: 16px Arial; color: #000aae; " class="togglebtn"  onclick="window.location.replace('nav.html')" >Exit</button>
+<style>
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }</style>
+
+        <div onload="load()" id="openModal" class="modalDialog">
+            <div>
+                
+
+                <h2>Warning!</h2>
+					 <p>This app requires having a connection to the internet to function.<br>Press OK above if you have internet access.</p><a href="#close" title="Close" class="close">OK</a>
+                  </div>
+        </div>
+		  
+<iframe style="position: fixed;width: 100%;height: 100%; border: none; left:0;right:0;top:0;bottom:0;" src="https://jcw87.github.io/c2-sans-fight/index.html></iframe>
+    </body>
+
