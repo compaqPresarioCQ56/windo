@@ -1,0 +1,28 @@
+<meta http-equiv="refresh" content="3; URL=https://physapplied.com/?w" />
+<style>
+body{
+background-color: black;
+  color: white;
+}
+</style>
+<div id="div1" class="fa"></div>
+
+<script>
+function load() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "_";
+  setTimeout(function () {
+      a.innerHTML = "";
+    }, 100);
+  setTimeout(function () {
+      a.innerHTML = "_";
+    }, 400);
+  setTimeout(function () {
+      a.innerHTML = "";
+    }, 900);
+
+}
+load();
+setInterval(load, 900);
+</script>
