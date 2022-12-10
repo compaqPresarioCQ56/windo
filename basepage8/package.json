@@ -1,0 +1,19 @@
+{
+  "name": "lctapps-browser",
+  "version": "10.10.21",
+  "description": "LCTapps browser is a simple web browser developed by LCTapps. This is the electron port",
+  "fullscreen": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^15.3.4"
+  },
+  "dependencies": {
+    "make": "^0.8.1"
+  }
+}
+
